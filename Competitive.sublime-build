@@ -1,0 +1,12 @@
+{
+    "shell_cmd": "g++ \"$file\" -o \"$file_base_name\" && ./\"$file_base_name\" < input.txt > output.txt",
+    "working_dir": "${file_path}",
+    "selector": "source.c, source.cpp",
+    "file_regex": "^([a-zA-Z0-9_ /.-]+):(\\d+):(\\d+):?\\s*(.*)$",
+    "variants": [
+        {
+            "name": "Run with input and output redirection",
+            "shell_cmd": "g++ \"$file\" -o \"$file_base_name\" && ./\"$file_base_name\" < input.txt > output.txt"
+        }
+    ]
+}

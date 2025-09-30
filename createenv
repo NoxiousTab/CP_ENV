@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Create the Contest directory if it doesn't exist
+mkdir -p Contest
+
+cd Contest
+# Copy the contest_solve.cpp file to the new directory
+cp ~/Templates/contest_solve.cpp .
+
+# Create copies A.cpp, B.cpp, C.cpp, ..., G.cpp
+for letter in {A..G}; do
+    cp ~/Templates/contest_solve.cpp "$letter.cpp"
+done
+
+rm contest_solve.cpp
+
+# Create empty input.txt and output.txt files
+touch input.txt output.txt
+
+echo "Contest directory structure created successfully!"

@@ -1,0 +1,2 @@
+cat solve.cpp | xclip -sel clipboard
+
